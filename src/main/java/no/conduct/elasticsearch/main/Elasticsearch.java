@@ -43,10 +43,11 @@ public class Elasticsearch extends ExternalSystemWithShutdown {
     private Node node;
     private Client client;
 
-    public final static String EMBEDDED_PROPERY_NAME = "elasticsearch.embedded";
-    public final static String CLUSER_NAME_PROPERY_NAME = "elasticsearch.cluster.name";
-    public final static String HTTP_PORT_PROPERY_NAME = "elasticsearch.http.port"; // default 9200
-    public final static String TCP_PORT_PROPERY_NAME = "elasticsearch.transport.tcp.port"; // default 9300
+    public final static String EMBEDDED_PROPERTY_NAME = "elasticsearch.embedded";
+    public final static String HOST_NAME_PROPERTY_NAME = "elasticsearch.host";
+    public final static String CLUSTER_NAME_PROPERTY_NAME = "elasticsearch.cluster.name";
+    public final static String HTTP_PORT_PROPERTY_NAME = "elasticsearch.http.port"; // default 9200
+    public final static String TCP_PORT_PROPERTY_NAME = "elasticsearch.transport.tcp.port"; // default 9300
 
 
     @Inject
@@ -56,7 +57,7 @@ public class Elasticsearch extends ExternalSystemWithShutdown {
 
     @Override
     public void start(String[] args, Properties properties) throws Exception {
-        boolean isEmbedded = Boolean.parseBoolean(properties.getProperty(EMBEDDED_PROPERY_NAME));
+        boolean isEmbedded = Boolean.parseBoolean(properties.getProperty(EMBEDDED_PROPERTY_NAME));
         if (isEmbedded) {
             startNodeClient(properties);
         } else {
@@ -66,9 +67,9 @@ public class Elasticsearch extends ExternalSystemWithShutdown {
     }
 
     private void startNodeClient(Properties properties) throws Exception {
-        String name = properties.getProperty(CLUSER_NAME_PROPERY_NAME);
-        int httpPort = Integer.parseInt(properties.getProperty(HTTP_PORT_PROPERY_NAME));
-        int tcpPort = Integer.parseInt(properties.getProperty(TCP_PORT_PROPERY_NAME));
+        String name = properties.getProperty(CLUSTER_NAME_PROPERTY_NAME);
+        int httpPort = Integer.parseInt(properties.getProperty(HTTP_PORT_PROPERTY_NAME));
+        int tcpPort = Integer.parseInt(properties.getProperty(TCP_PORT_PROPERTY_NAME));
         startNodeClient(name, httpPort, tcpPort);
     }
 
@@ -107,15 +108,15 @@ public class Elasticsearch extends ExternalSystemWithShutdown {
     }
 
     private void startTransportClient(Properties properties) throws Exception {
-        String hostName = properties.getProperty("elasticsearch.host");
-        int transportTcpPort = Integer.parseInt(properties.getProperty("elasticsearch.transport.tcp.port"));
+        String hostName = properties.getProperty(HOST_NAME_PROPERTY_NAME);
+        int transportTcpPort = Integer.parseInt(properties.getProperty(TCP_PORT_PROPERTY_NAME));
 
         Settings settings = Settings.settingsBuilder()
-                .put("cluster.name", properties.getProperty("elasticsearch.cluster.name"))
+                .put("cluster.name", properties.getProperty(CLUSTER_NAME_PROPERTY_NAME))
                 .put("client.transport.sniff", true)
                 .build();
 
-        client = TransportClient.builder().build()
+        client = TransportClient.builder().settings(settings).build()
                 .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(hostName), transportTcpPort));
 
         createIndices(client.admin().indices());

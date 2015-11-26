@@ -36,10 +36,10 @@ public class ElasticsearchTest {
         systemProperties = System.getProperties();
         Properties properties = new Properties();
         properties.putAll(systemProperties);
-        properties.put(Elasticsearch.EMBEDDED_PROPERY_NAME, "true");
-        properties.put(Elasticsearch.CLUSER_NAME_PROPERY_NAME, "unit_test");
-        properties.put(Elasticsearch.HTTP_PORT_PROPERY_NAME, "9201");
-        properties.put(Elasticsearch.TCP_PORT_PROPERY_NAME, "9301");
+        properties.put(Elasticsearch.EMBEDDED_PROPERTY_NAME, "true");
+        properties.put(Elasticsearch.CLUSTER_NAME_PROPERTY_NAME, "unit_test");
+        properties.put(Elasticsearch.HTTP_PORT_PROPERTY_NAME, "9201");
+        properties.put(Elasticsearch.TCP_PORT_PROPERTY_NAME, "9301");
         System.setProperties(properties);
 
         elasticsearch = new Elasticsearch();
