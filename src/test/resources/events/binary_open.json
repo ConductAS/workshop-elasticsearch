@@ -1,0 +1,17 @@
+{
+   "@context" : "http://context.smartly.no",
+   "origin" : {
+      "@type" : "bin_open",
+      "@id" : "1285452",
+      "endp_id" : 1,
+      "location" : "entrance"
+   },
+   "event" : {
+      "@type" : "binary",
+      "subtype" : "open",
+      "default" : { "value" : true }
+   },
+   "creation_time" : 13858155820,
+   "uuid" : "86f93c70-6c47-4cfc-91eb-30d3b069e417",
+   "spid" : "spid1"
+}

@@ -1,0 +1,53 @@
+{ "conduct_event" : {
+   "include_in_all": false,
+   "_source" : { },
+   "properties" : {
+      "@context" : { "type" : "string", "store" : false, "index": "no", "include_in_all" : true },
+      "uuid" : { "type" : "string", "store" : false, "index": "not_analyzed", "include_in_all" : true },
+      "corid" : { "type" : "string", "store" : false, "index": "not_analyzed", "include_in_all" : true },
+      "creation_time" : { "type" : "long", "include_in_all" : true },
+      "creation_user" : { "type" : "string", "store" : false, "index": "not_analyzed", "include_in_all" : true },
+
+      "origin" : {
+         "type" : "nested",
+         "properties" : {
+            "@type" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "@id" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "location" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "endp_id" : { "type" : "integer" }
+         }
+      },
+      "event" : {
+         "type" : "nested",
+         "properties" : {
+            "@type" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "subtype" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "eventValue" : {
+               "type" : "nested",
+               "properties" : {
+                  "type" : { "type" : "string", "store" : false, "index" : "no" },
+                  "unit" : { "type" : "string", "store" : false, "index" : "no" },
+                  "value" : { "type" : "object" }
+               }
+            },
+            "properties" : { "type" : "object" }
+         }
+      },
+      "command" : {
+         "type" : "nested",
+         "properties" : {
+            "@type" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "subtype" : { "type" : "string", "store" : false, "index" : "not_analyzed", "norms" : { "enabled" : false } },
+            "eventValue" : {
+               "type" : "nested",
+               "properties" : {
+                  "type" : { "type" : "string", "store" : false, "index" : "no" },
+                  "unit" : { "type" : "string", "store" : false, "index" : "no" },
+                  "value" : { "type" : "object" }
+               }
+            },
+            "properties" : { "type" : "object" }
+         }
+      }
+   }
+} }

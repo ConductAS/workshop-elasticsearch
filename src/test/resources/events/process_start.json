@@ -1,0 +1,22 @@
+{
+   "origin" : {
+      "vendor" : "SmartlyTest",
+      "location" : "XYZ",
+      "@type" : "alarm",
+      "@id" : "999",
+      "endp_id" : 1
+   },
+   "event" : null,
+   "command" : {
+      "@type" : "process",
+      "subtype" : "start",
+      "default" : null,
+      "properties" : null,
+      "accept" : false
+   },
+   "uuid" : "a14b9f58-eb92-476b-9fe1-7b4f18ea92bd",
+   "@context" : "http://context.smartly.no",
+   "creation_time" : 1443085480866,
+   "corid" : null,
+   "spid" : null
+}

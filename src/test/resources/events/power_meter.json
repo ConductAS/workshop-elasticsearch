@@ -1,0 +1,120 @@
+{
+   "@context" : "http://context.smartly.no",
+   "origin" : {
+      "@type" : "met_power",
+      "@id" : 1085866,
+      "location" : "fuse cabinet"
+   },
+   "event" : {
+      "@type" : "meter",
+      "subtype" : "power",
+      "default" : {
+         "value" : 0.33,
+         "unit" : "kW"
+      },
+      "properties" : {
+         "power_P" : {
+            "unit" : "kW",
+            "value" : 0.33
+         },
+         "power_Q" : {
+            "unit" : "kvar",
+            "value" : 0.0
+         },
+         "energy_A" : {
+            "unit" : "kWh",
+            "value" : 4570.92
+         },
+         "energy_A_pos" : {
+            "unit" : "kWh",
+            "value" : 4570.92
+         },
+         "energy_A_neg" : {
+            "unit" : "kWh",
+            "value" : 0.0
+         },
+         "energy_R_pos" : {
+            "unit" : "kvarh",
+            "value" : 1.26
+         },
+         "energy_R_neg" : {
+            "unit" : "kvarh",
+            "value" : 1044.3700000000001
+         },
+         "current_L1" : {
+            "unit" : "A",
+            "value" : 2.1
+         },
+         "current_L2" : {
+            "unit" : "A",
+            "value" : 0.0
+         },
+         "current_L3" : {
+            "unit" : "A",
+            "value" : 0.0
+         },
+         "volt_L1" : {
+            "unit" : "V",
+            "value" : 240
+         },
+         "volt_L2" : {
+            "unit" : "V",
+            "value" : 0
+         },
+         "volt_L3" : {
+            "unit" : "V",
+            "value" : 0
+         },
+         "power_P_L1" : {
+            "unit" : "kW",
+            "value" : 0.33
+         },
+         "power_P_L2" : {
+            "unit" : "kW",
+            "value" : 0.33
+         },
+         "power_P_L3" : {
+            "unit" : "kW",
+            "value" : 0.33
+         },
+         "power_Q_L1" : {
+            "unit" : "kvar",
+            "value" : 0.0
+         },
+         "power_Q_L2" : {
+            "unit" : "kvar",
+            "value" : 0.0
+         },
+         "power_Q_L3" : {
+            "unit" : "kvar",
+            "value" : 0.0
+         },
+         "phase_count" : {
+            "value" : 1
+         },
+         "phase_PQ" : {
+            "unit" : "deg",
+            "value" : 0
+         },
+         "phase_L1" : {
+            "unit" : "deg",
+            "value" : 0
+         },
+         "phase_L2" : {
+            "unit" : "deg",
+            "value" : 0
+         },
+         "phase_L3" : {
+            "unit" : "deg",
+            "value" : 0
+         },
+         "phase_freq" : {
+            "unit" : "Hz",
+            "value" : 50.0
+         }
+      }
+   },
+   "creation_time" : 13858155820,
+   "uuid" : "86f93c70-6c47-4cfc-91eb-30d3b069e418",
+   "spid" : "S-451-12"
+}

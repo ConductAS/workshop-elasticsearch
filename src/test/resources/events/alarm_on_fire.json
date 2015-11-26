@@ -1,0 +1,22 @@
+{
+   "@context": "http://context.smartly.no",
+   "origin": {
+      "@type": "app",
+      "@id": "alarm",
+      "vendor": "NorAlarm"
+   },
+   "event": {
+      "@type": "mode",
+      "subtype": "siren",
+      "default": {
+         "value": "fire"
+      },
+      "properties": {
+         "area_numbers" : ["01"],
+         "zone_numbers" : ["001", "002", "004"]
+      }
+   },
+   "creation_time": 1430221182224,
+   "uuid": "b6f93c70-6c47-4cfc-e1eb-30d3b069e467",
+   "spid": "S-451-12"
+}

@@ -1,0 +1,21 @@
+{
+   "@context" : "http://context.smartly.no",
+   "origin" : {
+      "@type" : "sen_temp",
+      "@id" : "1085866",
+      "endp_id" : 1,
+      "vendor" : "Canary",
+      "location" : "living room"
+   },
+   "event" : {
+      "@type" : "sensor",
+      "subtype" : "temperature",
+      "default" : {
+         "value" : 20.23,
+         "unit" : "C"
+      }
+   },
+   "creation_time" : 1430221182224,
+   "uuid" : "86f93c70-6c47-4cfc-91eb-30d3b069e417",
+   "spid" : "S-451-12"
+}

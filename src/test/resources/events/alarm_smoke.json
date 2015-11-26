@@ -1,0 +1,26 @@
+{
+   "@context" : "http://context.smartly.no",
+   "origin" : {
+      "@type" : "app",
+      "@id" : "alarm",
+      "vendor" : "Smartly"
+   },
+   "event" : {
+      "@type" : "alarm",
+      "subtype" : "dc05",
+      "default" : { "value" : "smoke" },
+      "properties" : {
+         "dc05" : "9876RABC123LDEF456#2BCDEF|1111 00 001",
+         "timestamp" : 1385815515,
+         "room_name" : "living room",
+         "area_number" : "00",
+         "zone_number" : "001",
+         "zone_name" : "Kitchen",
+         "qualifier" : true
+      }
+   },
+   "creation_time" : 1430221182224,
+   "uuid" : "b6f93c70-6c47-4cfc-e1eb-30d3b069e466",
+   "corid" : "86f93c70-6c47-4cfc-91eb-30d3b069e417",
+   "spid" : "S-451-12"
+}

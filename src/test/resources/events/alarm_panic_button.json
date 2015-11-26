@@ -1,0 +1,18 @@
+{
+   "@context" : "http://context.smartly.no",
+   "origin" : {
+      "@type" : "mod_alarm",
+      "@id" : "1285451",
+      "endp_id" : 1,
+      "vendor" : "VSS",
+      "location" : "entrance"
+   },
+   "event" : {
+      "@type" : "alarm",
+      "subtype" : "situation",
+      "default" : { "value" : "panic" }
+   },
+   "creation_time" : 1430221182224,
+   "uuid" : "86f93c70-6c47-4cfc-91eb-30d3b069e417",
+   "spid" : "S-451-12"
+}

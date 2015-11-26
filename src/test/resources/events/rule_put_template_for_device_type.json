@@ -1,0 +1,23 @@
+{
+   "origin" : {
+      "vendor" : "SmartlyTest",
+      "location" : "XYZ",
+      "@type" : "alarm",
+      "endp_id" : 1
+   },
+   "command" : {
+      "@type" : "rule",
+      "subtype" : "template",
+      "properties" : {
+         "device_type" : "alarm",
+         "esper_rule_template" : "select * from SmartlyEvent(origin.id=${deviceId})",
+         "template_arguments" : [ { "name" : "deviceId", "type" : "String", "description" : "the device id" } ],
+         "description" : "rule for one device"
+      }
+   },
+   "uuid" : "5807c427-7973-45d3-a600-1726d2099b82",
+   "@context" : "http://context.smartly.no",
+   "creation_time" : 1443085480866,
+   "corid" : null,
+   "spid" : null
+}

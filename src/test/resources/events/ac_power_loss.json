@@ -1,0 +1,22 @@
+{
+   "@context": "http://context.smartly.no",
+   "origin": {
+      "@type": "mod_power_source",
+      "@id": "sgw",
+      "endp_id": "1",
+      "vendor": "Smartly"
+   },
+   "event": {
+      "@type": "mode",
+      "subtype": "power_source",
+      "default": {
+         "value": "ac"
+      },
+      "properties" : {
+         "reason" : "ac_connected"
+      }
+   },
+   "creation_time": 1385815582000,
+   "uuid": "b6f93c70-6c47-4cfc-e1eb-30d3b069e466",
+   "spid": "S-451-12"
+}
