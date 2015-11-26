@@ -105,8 +105,8 @@ Json Schema for all the Classes who is involved (All is HTTP GET), and the rest 
 * ConductEvent is the standard event for the Conduct domain
 * SimpleAlarmEvent is a striped down version av ConductEvent
 ```
-/schema/ConductEvent
-/schema/SimpleAlarmEvent
+curl http://localhost:9080/schema/ConductEvent
+curl http://localhost:9080/schema/SimpleAlarmEvent
 ```
 
 # Start Elasticsearch
