@@ -6,7 +6,6 @@ Workshop med Elasticsearch avholdt 26.11.15
 # Build the code
 ## maven
 ```
-$ git checkout https://[username]@repo-dev.smartly.no/scm/san/conduct.git
 $ mvn clean install
 ```
 
